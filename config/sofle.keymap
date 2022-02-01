@@ -55,13 +55,13 @@
 // |     | INS  | PSCR | GUI   |       |      |                | HOME | PGDN | PGUP | END  |       |       |
 // |     | ALT  | CTRL | SHIFT |       | CAPS |                |   <- |   v  |   ^  |  ->  |       |       |
 // |     | UNDO | CUT  | COPY  | PASTE |      |      |  |      |      |   +  |   =  |      |       |       |
-//              |      |       |       |      |      |  |      |      |      |      |      |
+//              |      |       |       |      |      |  |      | DEL  |      |      |      |
             bindings = <
 &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4             &trans    &trans    &trans    &trans    &trans  &trans
 &trans     &kp INS      &kp PSCRN    &kp K_CMENU  &trans       &trans                   &kp HOME  &kp PG_DN &kp PG_UP &kp END   &trans  &trans
 &trans     &kp LALT     &kp LCTRL    &kp LSHFT    &trans       &kp CLCK                 &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &trans  &trans
 &trans     &kp K_UNDO   &kp K_CUT    &kp K_COPY   &kp K_PASTE  &trans  &trans   &trans  &trans    &kp PLUS  &kp EQUAL &trans    &trans  &trans
-                        &trans       &trans       &trans       &trans  &trans   &trans  &trans    &trans    &trans    &trans
+                        &trans       &trans       &trans       &trans  &trans   &trans  &kp DEL   &trans    &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
