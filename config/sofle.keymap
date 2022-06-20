@@ -113,8 +113,8 @@
 
     conditional_layers {
         tri_layer {
-            if-layers = <LOWER RAISE>
-            then-layer = <ADJUST>
-        }
-    }
+            if-layers = <LOWER RAISE>;
+            then-layer = <ADJUST>;
+        };
+    };
 };
