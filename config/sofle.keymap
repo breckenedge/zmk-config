@@ -12,7 +12,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        qwerty_layer {
 // ---------------------------------------------------------------------------------------------------------------------
 // |  `    |  1  |  2  |  3   |  4  |  5  |                              |  6    |  7   |  8    |  9  |   0   |   \   |
 // |  TAB  |  Q  |  W  |  E   |  R  |  T  |                              |  Y    |  U   |  I    |  O  |   P   |   -   |
@@ -25,6 +25,24 @@
 &kp ESC        &kp A  &kp S     &kp D     &kp F    &kp G                          &kp H     &kp J     &kp K     &kp L    &kp SEMI &kp SQT
 &mt LSHFT LPAR &kp Z  &kp X     &kp C     &kp V    &kp B    &kp C_MUTE  &none     &kp N     &kp M     &kp COMMA &kp DOT  &kp FSLH &mt RSHFT RPAR
                       &kp LBKT  &kp LCTRL &kp LALT &kp LGUI &lt 1 SPACE &lt 2 RET &kp BSPC  &none     &kp K_APP &kp RBKT
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+        };
+
+        colemak_layer {
+// ---------------------------------------------------------------------------------------------------------------------
+// |  `    |  1  |  2  |  3   |  4  |  5  |                              |  6    |  7   |  8    |  9  |   0   |   \   |
+// |  TAB  |  Q  |  W  |  F   |  P  |  B  |                              |  J    |  L   |  U    |  Y  |   ;   |   -   |
+// |  ESC  |  A  |  R  |  S   |  T  |  G  |                              |  M    |  N   |  E    |  I  |   O   |   '   |
+// |SHIFT/(|  Z  |  X  |  C   |  D  |  V  |             |  |             |  K    |  H   |  ,    |  .  |   /   |SHIFT/)|
+//               |  [  | CTRL | ALT | GUI |             |  |             | BKSPC |  FN  | MENU  |  ]  |
+            bindings = <
+&trans   &trans &trans    &trans    &trans   &trans                     &trans    &trans    &trans    &trans   &trans   &trans
+&trans   &kp Q  &kp W     &kp F     &kp P    &kp B                      &kp J     &kp L     &kp U     &kp Y    &kp SEMI &trans
+&trans   &kp A  &kp R     &kp S     &kp T    &kp G                      &kp M     &kp N     &kp E     &kp I    &kp O    &trans
+&trans   &kp Z  &kp X     &kp C     &kp D    &kp V    &trans   &trans   &kp K     &kp H     &kp COMMA &kp DOT  &kp FSLH &trans
+                &trans    &trans    &trans   &trans   &trans   &trans   &trans    &trans    &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
